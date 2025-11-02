@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock app</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+    crossorigin="anonymous">
+    <!-- alemmat kortit -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- ylemmät kortit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div class="search-wrapper">
+        <div class="search-container">
+            <h4 class="mb-4 text-center">Stock Search</h4>
+
+            <form id="lomake">
+                <div class="position-relative mb-4">
+                    <input name="kentta" id="kentta" type="text" class="form-control search-input" placeholder="Type stock ticker to search...">
+                    <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                </div>
+            </form>
+
+            <div class="recent-searches pt-3">
+                <p class="text-muted mb-3">Most Searched</p>
+                <div class="recent-item d-flex align-items-center">
+                    <i class="bi bi-clock-history me-2"></i>
+                    <span>AAPL</span>
+                </div>
+                <div class="recent-item d-flex align-items-center">
+                    <i class="bi bi-clock-history me-2"></i>
+                    <span>NVDA</span>
+                </div>
+                <div class="recent-item d-flex align-items-center">
+                    <i class="bi bi-clock-history me-2"></i>
+                    <span>GOOG</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sisalto" id="lukittu">
+
+        <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="logo"></div>
+            </div>
+            <div class="col-md-8">
+                <div>
+                    <h1 id="nimi"></h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-card bg-light">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3">
+                                <i class="fas fa-users stat-icon"></i>
+                            </div>
+                            <div>
+                                <div class="stat-value" id="symbol"></div>
+                                <div class="text-muted">Symbol</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 mt-md-0">
+                    <div class="stat-card bg-light">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3">
+                                <i class="fas fa-shopping-cart stat-icon"></i>
+                            </div>
+                            <div>
+                                <div class="stat-value" id="sector"></div>
+                                <div class="text-muted">Sector</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 mt-md-0">
+                    <div class="stat-card bg-light">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3">
+                                <i class="fas fa-dollar-sign stat-icon"></i>
+                            </div>
+                            <div>
+                                <div class="stat-value" id="porssi"></div>
+                                <div class="text-muted">Exchange</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container py-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="mb-0">Dashboard Overview</h4>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="row g-4">
+                <!-- Sales Card -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <span class="badge bg-success trend-badge">
+                                        <i class="fas fa-arrow-up me-1"></i>12.5%
+                                    </span>
+                            </div>
+                            <h6 class="text-muted mb-2">Total Sales</h6>
+                            <h4 class="mb-3">$24,589</h4>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users Card -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="stat-icon bg-success bg-opacity-10 text-success">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <span class="badge bg-danger trend-badge">
+                                        <i class="fas fa-arrow-down me-1"></i>5.2%
+                                    </span>
+                            </div>
+                            <h6 class="text-muted mb-2">Active Users</h6>
+                            <h4 class="mb-3">14,789</h4>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Card -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <span class="badge bg-success trend-badge">
+                                        <i class="fas fa-arrow-up me-1"></i>8.4%
+                                    </span>
+                            </div>
+                            <h6 class="text-muted mb-2">New Orders</h6>
+                            <h4 class="mb-3">1,589</h4>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Card -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card stat-card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="stat-icon bg-info bg-opacity-10 text-info">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <span class="badge bg-success trend-badge">
+                                        <i class="fas fa-arrow-up me-1"></i>15.7%
+                                    </span>
+                            </div>
+                            <h6 class="text-muted mb-2">Revenue</h6>
+                            <h4 class="mb-3">$45,289</h4>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Section -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="card-title mb-0">Recent Activity</h5>
+                                <button class="btn btn-light btn-sm">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                            </div>
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item border-0 d-flex align-items-center px-0">
+                                    <div class="avatar-sm bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                        <i class="fas fa-shopping-cart text-primary"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New order received</h6>
+                                        <p class="text-muted small mb-0">Order #123456 from John Doe</p>
+                                    </div>
+                                    <small class="text-muted">Just now</small>
+                                </div>
+                                <div class="list-group-item border-0 d-flex align-items-center px-0">
+                                    <div class="avatar-sm bg-success bg-opacity-10 rounded-circle p-2 me-3">
+                                        <i class="fas fa-user-plus text-success"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New user registered</h6>
+                                        <p class="text-muted small mb-0">User ID: #987654</p>
+                                    </div>
+                                    <small class="text-muted">2 min ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+   
+    
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
