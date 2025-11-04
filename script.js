@@ -221,7 +221,7 @@ lomake.addEventListener('submit', function(e) {
         }
 
         // asetetaan luku i-elementin perään
-        element.innerHTML = `<i class="${icon.className}"></i> ${muutos.toFixed(1)}%`;
+        element.innerHTML = `<i class="${icon.className}"></i> ${muutos.toFixed(2)}%`;
     }
 
     
