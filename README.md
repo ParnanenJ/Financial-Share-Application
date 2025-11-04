@@ -63,6 +63,7 @@ Lista l채hteist채 ja esimerkeist채, joita k채ytit projektin aikana. Mainitse my�
 https://bootstrapexamples.com/@ankit/search-section
 https://getbootstrap.com/docs/5.3/layout/grid/
 https://bootstrapexamples.com/@mishti/stats-card-made-with-boostrap-4-6
+https://www.loopple.com/components/bootstrap/charts
 
 ## Lisenssi
 Valitse projektille lisenssi seuraamalla t채t채 [opasta](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository).

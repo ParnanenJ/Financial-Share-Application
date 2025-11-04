@@ -63,7 +63,7 @@ lomake.addEventListener('submit', function(e) {
             valuutta = data[0].currency;
 
             // tallennetaan nykyinen hinta
-            nykhinta = data[0].price;
+            nykhinta = parseFloat(data[0].price);
             document.getElementById("hinta").textContent = nykhinta + " " + valuutta;
 
             // Vaihdon määrä
@@ -96,20 +96,22 @@ lomake.addEventListener('submit', function(e) {
                 ///////////////////////////////////////////////////////////
                 //TIEDON KERUU
                 // tallennetaan Päivän avushinta
-                avshinta = hintadata[0].open;
+                avshinta = parseFloat(hintadata[0].open);
                 document.getElementById("aloitushinta").textContent = `(Open ${avshinta} ${valuutta})`;
                 // Päivän Ylin hinta
-                document.getElementById("ylin").textContent = hintadata[0].high + " " + valuutta;
+                maxHinta = parseFloat(hintadata[0].high)
+                document.getElementById("ylin").textContent = maxHinta + " " + valuutta;
                 // Päivän Alin hinta
-                document.getElementById("alin").textContent = hintadata[0].low + " " + valuutta;
+                minHinta = parseFloat(hintadata[0].low)
+                document.getElementById("alin").textContent = minHinta + " " + valuutta;
 
             
                 ///////////////////////////////////////////////////////////
                 // laskut
                 // Lasketaan tuottoprosentti ja muokataan tyyli -/+
-                prosenttilaskut(nykhinta, avshinta, "pricemuutos")
-                prosenttilaskut(nykhinta, avshinta, "maxmuutos")
-                prosenttilaskut(nykhinta, avshinta, "minmuutos")
+                prosenttilaskut(avshinta, nykhinta, "pricemuutos")
+                prosenttilaskut(avshinta, maxHinta, "maxmuutos")
+                prosenttilaskut(avshinta, minHinta, "minmuutos")
 
 
                 ///////////////////////////////////////////////////////////
@@ -193,7 +195,7 @@ lomake.addEventListener('submit', function(e) {
         };
         hintaTieto.send();
     };
-
+    ///////////////////////////////////////////////////////////
     // Prosenttien laskeminen ja tulostus
 
     function prosenttilaskut(hinta, hinnasta, id) {
