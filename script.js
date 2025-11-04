@@ -70,12 +70,20 @@ lomake.addEventListener('submit', function(e) {
 
             // nykyinen hinta
             hinta.textContent = data[0].price + " " + valuutta
+
+            // Vaihdon määrä
+            document.getElementById("vaihto").textContent = data[0].volume
             
             // Yrityksen kuvaus
             info.textContent = data[0].description
         }
     };
     tieto.send(); // Kutsu send() tämän ulkopuolella
+
+    // Nollataan rajoitetut tiedot ettei tosen osakkeen tiedot jää näkyviin jos käyttäjä hakee toista osaketta joole ei ole saatavissa hinta tietoja
+    document.getElementById("aloitushinta").textContent = "-"
+    document.getElementById("ylin").textContent = "-"
+    document.getElementById("alin").textContent = "-"
 
     // Jos ticker löytyy limited listasta haetaan tarkemmat hintatiedot
     if (limited.includes(syote)){
@@ -89,9 +97,9 @@ lomake.addEventListener('submit', function(e) {
                 // Päivän avushinta
                 document.getElementById("aloitushinta").textContent = `(Open ${hintadata[0].open} ${valuutta})`;
                 // Päivän Ylin hinta
-                document.getElementById("ylin").textContent = hintadata[0].high + valuutta;
+                document.getElementById("ylin").textContent = hintadata[0].high + " " + valuutta;
                 // Päivän Alin hinta
-                document.getElementById("alin").textContent = hintadata[0].low + valuutta;
+                document.getElementById("alin").textContent = hintadata[0].low + " " + valuutta;
 
             }
         };

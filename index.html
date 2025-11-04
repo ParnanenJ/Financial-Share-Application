@@ -29,21 +29,13 @@
 
             <div class="recent-searches pt-3">
                 <p class=" mb-3 text-danger">NOTE!</p>
+                <i class="bi bi-exclamation-circle-fill text-danger bf-danger"></i>
                 <div class="recent-item d-flex align-items-center">
-                    <i class="bi bi-clock-history me-2"></i>
                     <span>Price searches are limited to AAPL, TSLA, AMZN, MSFT, NVDA, GOOGL, META, NFLX, JPM, V, BAC, AMD, PYPL, DIS, T, PFE,
                          COST, INTC, KO, TGT, NKE, SPY, BA, BABA, XOM, WMT, GE, CSCO, VZ, JNJ, CVX, PLTR, SQ, SHOP, SBUX, SOFI, HOOD, RBLX, 
                          SNAP, AMD, UBER, FDX, ABBV, ETSY, MRNA, LMT, GM, F, RIVN, LCID, CCL, DAL, UAL, AAL, TSM, SONY, ET, NOK, MRO, COIN, RIVN, 
                          SIRI, SOFI, RIOT, CPRX, PYPL, TGT, VWO, SPYG, NOK, ROKU, HOOD, VIAC, ATVI, BIDU, DOCU, ZM, PINS, TLRY, WBA, VIAC, MGM, NFLX, 
                          NIO, C, GS, WFC, ADBE, PEP, UNH, CARR, FUBO, HCA, TWTR, BILI, SIRI, VIAC, FUBO, RKT</span>
-                </div>
-                <div class="recent-item d-flex align-items-center">
-                    <i class="bi bi-clock-history me-2"></i>
-                    <span>NVDA</span>
-                </div>
-                <div class="recent-item d-flex align-items-center">
-                    <i class="bi bi-clock-history me-2"></i>
-                    <span>GOOG</span>
                 </div>
             </div>
         </div>
@@ -139,7 +131,7 @@
                     </div>
                 </div>
 
-                <!-- Users Card -->
+                <!-- korkein hinta kortti -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card stat-card border-0 shadow-sm">
                         <div class="card-body">
@@ -160,7 +152,7 @@
                     </div>
                 </div>
 
-                <!-- Orders Card -->
+                <!-- alin hinta kortti -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card stat-card border-0 shadow-sm">
                         <div class="card-body">
@@ -181,7 +173,7 @@
                     </div>
                 </div>
 
-                <!-- Revenue Card -->
+                <!-- vaihdon määrä kortti -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card stat-card border-0 shadow-sm">
                         <div class="card-body">
@@ -193,10 +185,10 @@
                                         <i class="fas fa-arrow-up me-1"></i>15.7%
                                     </span>
                             </div>
-                            <h6 class="text-muted mb-2">Revenue</h6>
-                            <h4 class="mb-3">$45,289</h4>
+                            <h6 class="text-muted mb-2">Volume (shares)</h6>
+                            <h4 class="mb-3" id="vaihto">-<!--vaihdon määrä--></h4>
                             <div class="progress">
-                                <div class="progress-bar bg-info" style="width: 90%"></div>
+                                <div class="progress-bar bg-info" style="width: 100%"></div>
                             </div>
                         </div>
                     </div>
