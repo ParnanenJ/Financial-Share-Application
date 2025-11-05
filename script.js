@@ -30,9 +30,6 @@ lomake.addEventListener('submit', function(e) {
     }
 
 
-    // Näytetään loppuosa sivusta
-    lukko.style.display = "block";
-
     ///////////////////////////////////////////////////////////
     // 1 API KUTSU
 
@@ -42,6 +39,20 @@ lomake.addEventListener('submit', function(e) {
     tieto.onreadystatechange = function() {
         if (tieto.readyState === 4 && tieto.status === 200) {
             let data = JSON.parse(tieto.responseText);
+
+            if (data.length === 0){
+                lukko.style.display = "none";
+                alert("No stocks found");
+                document.getElementById("error").innerHTML = "No stocks found"
+                return;
+            }
+            document.getElementById("error").innerHTML = ""
+
+            // Näytetään loppuosa sivusta
+            lukko.style.display = "block";
+
+            // Rullataan automaattisesti bodyn ekan divin alkuun
+            document.getElementById("bodyAlku").scrollIntoView({ behavior: "smooth" });
 
             // Logon lisäys
             let kuva = document.createElement("img");
