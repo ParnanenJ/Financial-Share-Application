@@ -62,6 +62,7 @@ Lista lähteistä ja esimerkeistä, joita käytin projektin aikana.
 - [Mishti](https://bootstrapexamples.com/@mishti/stats-card-made-with-boostrap-4-6)
 - [Aisha Bello](https://bootstrapexamples.com/@aisha-bello/dashboard-statistics-cards)  
 - [Loople](https://www.loopple.com/components/bootstrap/charts?page=2)
+- [FMP](https://site.financialmodelingprep.com/developer/docs)  
 - Projektissa on hyödynnetty ChatGPT:ä koodin tarkistukseen ja virheiden kojaaamiseen.
 
 ## Lisenssi
