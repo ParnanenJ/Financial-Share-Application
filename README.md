@@ -47,7 +47,7 @@ Käytin seuraavia teknologioita: `html`, `css`, `javascript` ja `bootstrap`.
 Teknologioita käytettiin seuraavasti:  
 `html`: luotiin sovelluksen käyttöliittymän perusrakenne  
 `bootstrap`: määritettiin tyylit käyttöliittymälle  
-`css`: muokattiin tai tarkennettiin tyylejä
+`css`: muokattiin tai tarkennettiin tyylejä  
 `javascript`: lisättiin kaikki toiminnallisuus sovelluskelle
 
 ## Asennus  
