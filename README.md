@@ -58,6 +58,7 @@ Teknologioita käytettiin seuraavasti:
 ## Kiitokset
 Lista lähteistä ja esimerkeistä, joita käytin projektin aikana.    
 - [Bootstrap](https://getbootstrap.com/docs/5.3/layout/grid/)
+- [Bootstrap](https://icons.getbootstrap.com/)  
 - [Ankit khedkar](https://bootstrapexamples.com/@ankit/search-section)  
 - [Mishti](https://bootstrapexamples.com/@mishti/stats-card-made-with-boostrap-4-6)
 - [Aisha Bello](https://bootstrapexamples.com/@aisha-bello/dashboard-statistics-cards)  
