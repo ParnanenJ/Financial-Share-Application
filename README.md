@@ -2,7 +2,7 @@
 Jiro Pärnänen 
 
 ## Verkkolinkit:
-Pääset julkaistuun sovellukseen käsiksi osoitteessa [Github.io](https://parnanenj.github.io/Financial-Share-Application/) tai [netlify.app](https://parnanenj.github.io/Financial-Share-Application/)
+Pääset julkaistuun sovellukseen käsiksi osoitteessa [Github.io](https://parnanenj.github.io/Stock-data-application/) tai [netlify.app](https://parnanenj.github.io/Financial-Share-Application/)  
 Linkki projektin videoesittelyyn [google.com](https://google.com)
 
 ## Oma arvio työstä ja oman osaamisen kehittymisestä
@@ -18,7 +18,7 @@ Kurssi sekä lähiopetus ovat tuntuneet tähän asti erittäin kiinnostavilta ja
 ## Sisällysluettelo:
 
 - [Tietoja sovelluksesta](#tietoja-sovelluksesta)
-- [Tunnetut virheet/bugit](#Tunnetut virheet/bugit)
+- [Tunnetut virheet/bugit](#Tunnetut-virheet/bugit)
 - [Kuvakaappaukset](#kuvakaappaukset)
 - [Teknologiat](#teknologiat)
 - [Asennus](#asennus)
@@ -32,13 +32,15 @@ jonka takia sovelluksen osakehakeu on rajattu ( etenkin hintatietoja hakiessa). 
 liittyviä tietoja, näytetään ne käyttäjälle selkeässä käyttöliittymässä. Sovellus on myös responssiivinen eli sitä voi käyttää myös puhelimella.
 
 ## Tunnetut virheet/bugit
----
+-  
 
-## Kuvakaappaukset
-Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksesta  
-`![Kirjoittaminen](https://unsplash.com/photos/VBPzRgd7gfc)`
-
-Kuva: [Kelly Sikkema](https://unsplash.com/@kellysikkema)
+## Kuvakaappaukset  
+Hakukenttä:
+![Aloitus](https://github.com/ParnanenJ/Stock-data-application/blob/main/screenshots/haku.png)  
+Sisältö:  
+![Body1](https://github.com/ParnanenJ/Stock-data-application/blob/main/screenshots/data1.png)
+![Body2](https://github.com/ParnanenJ/Stock-data-application/blob/main/screenshots/data2.png)  
+[Puhelinmen käyttöliittymä (video)](https://video.laurea.fi/media/t/0_bzvj2gf5)
 
 ## Teknologiat 
 Käytin seuraavia teknologioita: `html`, `css`, `javascript` ja `bootstrap`.  
@@ -54,7 +56,7 @@ Teknologioita käytettiin seuraavasti:
 - käytä aiemmin mainittua linkkiä 
 
 ## Kiitokset
-Lista lähteistä ja esimerkeistä, joita käytit projektin aikana. Mainitse myös, jos käytit ChatGPT:tä tai muita tekoälytyökaluja koodauksen aikana ja kerro, miten ne auttoivat sinua.   
+Lista lähteistä ja esimerkeistä, joita käytin projektin aikana.    
 - [Bootstrap](https://getbootstrap.com/docs/5.3/layout/grid/)
 - [Ankit khedkar](https://bootstrapexamples.com/@ankit/search-section)  
 - [Mishti](https://bootstrapexamples.com/@mishti/stats-card-made-with-boostrap-4-6)
@@ -63,6 +65,4 @@ Lista lähteistä ja esimerkeistä, joita käytit projektin aikana. Mainitse my�
 - Projektissa on hyödynnetty ChatGPT:ä koodin tarkistukseen ja virheiden kojaaamiseen.
 
 ## Lisenssi
-Valitse projektille lisenssi seuraamalla tätä [opasta](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository).
-
-Esimerkki: MIT-lisenssi @ [tekijä](author.com)
+MIT-lisenssi @ ParnaneJ
