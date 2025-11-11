@@ -2,6 +2,7 @@ const lukko = document.getElementById("lukittu");
 // Näytetään aluksi pelkkä tiedonhaku palkki
 lukko.style.display = "none";
 
+// hintatietojen rajaus näihin osakkeisiin
 const limited = [
   "AAPL", "TSLA", "AMZN", "MSFT", "NVDA", "GOOGL", "META", "NFLX", "JPM", "V",
   "BAC", "AMD", "PYPL", "DIS", "T", "PFE", "COST", "INTC", "KO", "TGT", "NKE",
